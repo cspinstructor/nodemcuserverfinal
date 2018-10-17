@@ -3,6 +3,7 @@ const server = express();
 const Sensor = require('./Sensor');
 var value = 228;
 
+//from nodemcu
 server.get('/', (req, res) => {
   var value1 = req.query.sensor1;
 
