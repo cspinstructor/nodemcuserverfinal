@@ -67,15 +67,30 @@ class App extends Component {
 
         <div className="container">
           <div className="row">
-            <div className="text-center col-sm-2">
+            <div className="text-center col-sm-6">
               <div className="sensorvalue">
                 <label>Sensor1 Value</label>
                 <br />
                 <label>{this.state.sensor1} </label>
               </div>
             </div>
+            <div className="text-center col-sm-6">
+              <div className="sensortable">
+                <label>Sensor1 Table</label>
+                <br />
+                <label>{this.state.sensor1} </label>
+              </div>
+            </div>
+          </div>
 
-            <div className="text-center col-sm-10">
+          <div className="row">
+            <div className="dummy">
+              <label> </label>
+            </div>
+          </div>
+
+          <div className="row mt-5">
+            <div className="text-center col-sm-12">
               <div className="sensorgraph">
                 <label>Sensor1 Graph</label>
                 <br />

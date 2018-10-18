@@ -37,9 +37,12 @@
 .sensorvalue {
   background-color: rgb(241, 241, 169);
 }
-.sensortable {
-  background-color: rgb(241, 179, 179);
-}
+
 .sensorgraph {
   background-color: rgb(183, 248, 177);
+}
+
+.jumbotron {
+  height: 150px;
+  padding-top: 5px;
 }
