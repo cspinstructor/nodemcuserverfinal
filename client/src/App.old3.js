@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
-import ReactTable from 'react-table';
-import 'react-table/react-table.css';
+import Table from './Table';
 
 import {
   LineChart,
@@ -93,21 +92,7 @@ class App extends Component {
                   </label>
                   <br />
                   <div>
-                    <ReactTable
-                      data={this.state.sensor1alldata}
-                      columns={[
-                        {
-                          Header: 'Sequence',
-                          accessor: 'seq'
-                        },
-                        {
-                          Header: 'Value',
-                          accessor: 'value'
-                        }
-                      ]}
-                      defaultPageSize={5}
-                      className="-striped -highlight"
-                    />
+                    <Table list={this.state.sensor1alldata} />
                   </div>
                 </div>
               </div>

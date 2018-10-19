@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
-import ReactTable from 'react-table';
-import 'react-table/react-table.css';
-
 import {
   LineChart,
   Line,
@@ -31,7 +28,6 @@ class App extends Component {
     inarray.forEach(obj => {
       array.push({
         seq: ++i,
-        name: obj.name,
         value: obj.value
       });
     });
@@ -71,55 +67,20 @@ class App extends Component {
 
         <div className="container">
           <div className="row">
-            <div className="text-center container col-sm-4">
-              <div className="row">
-                <div className="sensorvalue">
-                  <label>
-                    <h4>Sensor1 Value</h4>
-                  </label>
-                  <br />
-                  <label>
-                    <h4>{this.state.sensor1} </h4>
-                  </label>
-                </div>
-              </div>
-              <div>
-                <label />
-              </div>
-              <div className="row">
-                <div className="sensortable">
-                  <label>
-                    <h4>Sensor1 Table</h4>
-                  </label>
-                  <br />
-                  <div>
-                    <ReactTable
-                      data={this.state.sensor1alldata}
-                      columns={[
-                        {
-                          Header: 'Sequence',
-                          accessor: 'seq'
-                        },
-                        {
-                          Header: 'Value',
-                          accessor: 'value'
-                        }
-                      ]}
-                      defaultPageSize={5}
-                      className="-striped -highlight"
-                    />
-                  </div>
-                </div>
+            <div className="text-center col-sm-2">
+              <div className="sensorvalue">
+                <label>Sensor1 Value</label>
+                <br />
+                <label>{this.state.sensor1} </label>
               </div>
             </div>
-            <div className="text-center container col-sm-8">
+
+            <div className="text-center col-sm-10">
               <div className="sensorgraph">
-                <label>
-                  <h4>Sensor1 Graph</h4>
-                </label>
+                <label>Sensor1 Graph</label>
                 <br />
                 <LineChart
-                  width={700}
+                  width={800}
                   height={400}
                   data={this.state.sensor1alldata}
                 >

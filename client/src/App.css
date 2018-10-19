@@ -38,6 +38,10 @@
   background-color: rgb(241, 241, 169);
 }
 
+.sensortable {
+  background-color: rgb(241, 201, 169);
+}
+
 .sensorgraph {
   background-color: rgb(183, 248, 177);
 }
